@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.hectorsomer.estudiantes.controllers.ViewStudentsUnachController">
+   <children>
+      <Label layoutX="156.0" layoutY="6.0" text="Estudiantes de la UNACH">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableStudentsUnach" layoutX="55.0" layoutY="41.0" prefHeight="271.0" prefWidth="470.0">
+         <columns>
+            <TableColumn fx:id="matriculaColumn" prefWidth="100.0" text="Matricula" />
+            <TableColumn fx:id="nameColumn" prefWidth="90.0" text="Nombre" />
+            <TableColumn fx:id="birthdateColumn" prefWidth="156.0" text="Fecha de nacimiento" />
+            <TableColumn fx:id="carreraColumn" prefWidth="123.0" text="Carrera" />
+         </columns>
+      </TableView>
+      <Button fx:id="exitButton" layoutX="499.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#onClickExitButton" style="-fx-background-color: red;" text="Salir" />
+   </children>
 </AnchorPane>
